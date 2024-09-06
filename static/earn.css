@@ -1,0 +1,51 @@
+h1 {
+    margin-top: 50px;
+    margin-left: 200px;
+    color: crimson;
+    margin-bottom: 60px;
+    font-size: 40px;
+}
+h2 {
+    color: red;
+    font-size: 50px;
+    margin-left: 40px;
+}
+
+li {
+    font-size: 50px;
+    color: royalblue;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+span{
+    font-size: 50px;
+    display: block;
+    color: crimson;
+}
+#wallet {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 80px;
+}
+.img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    text-align: right;
+}
+hr {
+    width: 440px;
+    margin-left: 40px;
+    height: 3.5px;
+    background: limegreen;
+    border: 1px limegreen;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+p {
+    font-size: 50px;
+    border: 1px solid limegreen;
+    width: 170px;
+    height: 80px;
+    padding-top: 15px;
+}

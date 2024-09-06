@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BCA Wala - Earn</title>
+    <link href = 'static\earn.css' rel="stylesheet">
+</head>
+<body>
+
+    <center><a href = "{{url_for('home')}}"><img class="logo" src = "static/images/logo-removebg-preview.png"></a></center>
+    <span id="wallet"> Balance: {{current_user.Wallet}} <img class  = "img" src = "static\images\earn.JPG"> </span>
+        <div>
+    <h1> Your referal code ---->  <a id="whatsapp-share" href="#" target="_blank">
+    {{current_user.Email}} </a></h1>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentUserEmail = "{{ current_user.Email }}"; // Using current_user.Email from your framework (e.g., Flask)
+            var websiteUrl = "http://127.0.0.1:5000/signin";
+            var message = `check out this amazing website which offers you amazing notes and test series for BCA absolutly for FREE!!. It even provides you coding and web development courses , live classes and much more!!You will receive 50 coins in your wallet when you signin using my referal code..Hurry up it's a limited time offer!! ${websiteUrl}?referral=${encodeURIComponent(currentUserEmail)}`;
+
+            var whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+            document.getElementById("whatsapp-share").setAttribute("href", whatsappUrl);
+        });
+    </script>
+    <ul><h2>Terms & Conditons </h2>
+        <hr>
+    <li>When your friend uses your referal code he gets 50 coins and you get 200 coins in your wallet.</li>
+    <li>Coins can't be reedemed, they can be used to get discount on the courses and Test Series.</li>
+    <li>Coins can also be used to play exciting games and win the rewards.</li>
+    <li>Rewards Can be cash amount , any gadget or other stuff.</li>
+    </ul>
+    <center><p>
+        <a href = "{{url_for('game')}}" style="text-decoration: none;">
+        Earn </a>
+    </p></center>
+    </body>
+    </html>

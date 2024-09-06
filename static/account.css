@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+#heading{
+    font-size: 80px;
+    margin-top: 20px;
+    color: cornflowerblue;
+}
+
+
+div{
+    margin: 0 auto;
+    border: 1px solid red;
+    height: 700px;
+    width: 600px;
+    margin-top: 10px;
+    text-align: center;
+}
+span{
+    font-size: 50px;
+    display: block;
+    color: crimson;
+}
+
+#name{
+    margin-top: 30px;
+}
+#email{
+    padding-top: 30px;
+}
+#college{
+    padding-top: 30px;
+}
+#status{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 28px;
+    color: blue;
+}
+
+#wallet {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 80px;
+}
+img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    text-align: right;
+}
+
+p {
+    color: blueviolet;
+}
+
+#logout{
+    font-size: 40px;
+    border: 2px solid limegreen;
+    height: 80px;
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin-left: 220px;
+    padding-top: 10px;
+    text-decoration: none;
+}

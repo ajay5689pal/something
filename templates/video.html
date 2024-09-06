@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>BCA Wala - Learn</title>
+    </head>
+    <body style="background: rgba(100, 148, 237, 0.651);">
+        <center><h1 style="margin-top: 10px;font-family: cursive; font-size: 40px; color: red;">{{video_id}}</h1></center>
+        <center><video controls style="margin-top: 100px; height:600px;" id = "videoPlayer">
+            {% if video_id == 'Lecture 1 IntroPython' %}
+        <source src="/static/videos/pyl1.mp4" type="video/mp4">
+        {% elif video_id == 'Lecture2Python' %}
+        <source src="/static/videos/pyl2.mp4" type="video/mp4">
+        {% elif video_id == 'Lecture-3Python' %}
+        <source src="/static/videos/pyl3.mp4" type="video/mp4">
+        {% elif video_id == 'Lecture 1 Introhtml' %}
+        <source src="/static/videos/pyl1.mp4" type="video/mp4">
+        {% elif video_id == 'Lecture2html' %}
+        <source src="/static/videos/pyl1.mp4" type="video/mp4">
+        {% elif video_id == 'Lecture-3html' %}
+        <source src="/static/videos/pyl1.mp4" type="video/mp4">
+        {% elif video_id == 'Lecture 1 Introwebdevelopment' %}
+        <source src="/static/videos/pyl1.mp4" type="video/mp4">
+        {% elif video_id == 'Lecture2webdevelopment' %}
+        <source src="/static/videos/pyl1.mp4" type="video/mp4">
+        {% elif video_id == 'Lecture-3webdevelopment' %}
+        <source src="/static/videos/pyl1.mp4" type="video/mp4">
+        {% endif %}
+        </video></center>
+    </body>
+</html>

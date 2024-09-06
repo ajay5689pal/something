@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body{
+        font-family: cursive;
+        background-color: black;
+    }
+    
+    p{
+        text-align: center;
+        font-size: 50px;
+        color: coral;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    span{
+        color: red;
+        font-size: 80px;
+    }
+    article{
+        text-align: center;
+        color: crimson;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    h1{
+        color: blueviolet;
+        font-size: 40px;
+        margin-left: 20px;
+    }
+    div {
+        font-size: 35px;
+        color: cornflowerblue;
+        margin-left: 30px;
+    
+        margin-bottom: 45px;
+    }
+    .logo{
+        padding-top: 20px;
+         height: 100px;
+         width: 300px;}
+         </style>
+    <title>Test Result</title>
+</head>
+<body>
+    <center> <a href = "{{url_for('home')}}"><img class="logo" src = "{{url_for('static' , filename = 'images/logo-removebg-preview.png')}}"></a></center>
+    <p>Score : <span>{{ score }} / {{ total_marks }} </span></p>
+    <article>Answered Wrong---</article>
+    {%for  question   , answer  in wrong_questions.items()%}
+    <h1>{{question}}  </h1>
+    <div>correct answer:--> {{answer}}</div>
+    {%endfor%}
+</body>
+</html>

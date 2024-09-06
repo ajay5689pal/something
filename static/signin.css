@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+#main{
+    background-color: black;
+}
+#heading{
+    font-size: 60px;
+    font-weight: 900;
+    color: crimson;
+    font-family: cursive;
+}
+div{
+    margin: 0 auto;
+    border: 1.5px solid rgba(255, 0, 0, 0.774);
+    background-color: white;
+    height: 640px;
+    width: 800px;
+    margin-bottom: 20px;
+    backface-visibility: hidden;
+}
+
+#logo{
+    height: 120px;
+    width: 620px;
+    padding-left: 330px;
+    padding-top:10px;
+}
+form{
+    padding-left: 250px;
+    padding-top: 30px;
+    font-size: 30px;
+    border-radius: 100%; 
+    color: green;
+}
+#name{
+    border-radius:10%;
+    border: 2px solid rgb(19, 0, 128);
+    margin-bottom: 30px;
+    height: 52px;
+    font-size: 30px;
+    width: 278px;
+    padding-left: 5px;
+}
+#college{
+    border-radius:10%;
+    border: 2px solid rgb(19, 0, 128);
+    width: 260px;
+    margin-bottom: 30px;
+    height: 52px;
+    font-size: 30px;
+    padding-left: 5px;
+}
+#email{
+    border-radius:10%;
+    border: 2px solid rgb(19, 0, 128);
+    margin-bottom: 30px;
+    height: 52px;
+    font-size: 30px;
+    width: 285px;
+    padding-left: 5px;
+}
+#password{
+    border-radius:10%;
+    border: 2px solid rgb(19, 0, 128);
+    margin-left: 3px;
+    margin-bottom: 20px;
+    height: 52px;
+    font-size: 25px;
+    width: 250px;
+    padding-left: 5px;
+}
+#submit{
+    background-color: red;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 80px;
+    color: white;
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid gold;
+    border-radius: 20%;
+}
+#referal {
+    border-radius: 10%;
+    border: 2px solid rgb(19, 0, 128);
+    margin-bottom: 30px;
+    height: 52px;
+    font-size: 20px;
+    width: 275px;
+    padding-left: 5px;
+}
+#message{
+    color: deepskyblue;
+    font-size: 20px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    margin-right: 200px;
+}
+input{
+    outline: none;
+}

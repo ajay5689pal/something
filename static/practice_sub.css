@@ -1,0 +1,18 @@
+h1{
+    margin: 0 auto;
+    color: rgba(137, 43, 226, 0.795);
+    font-size: 60px;
+}
+li{
+    font-size: 30px;
+    margin: 30px;
+}
+a:link{
+    color: brown;
+}
+a:visited{
+    color: brown;
+}
+a:active{
+    color: brown;
+}

@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>BCA Wala-Notes</title>
+    </head>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 50px;
+            font-family: cursive;
+            margin-top: 200px;
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        <center> <a href = "{{url_for('home')}}"><img class="logo" src = "{{url_for('static'  , filename = 'images/logo-removebg-preview.png')}}"></a></center>
+       <center> <h2 style="font-size: 50px; color: red; margin-top: 40px; font-family: cursive;">{{id}}</h2></center>
+    <center><hr style="width:570px; background-color: limegreen;margin-top: 10px;height: 2px;border: 1px solid limegreen;"></center>
+    {%if id == 'Computer Fundamental'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'C Programming'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Principle of Management'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Business Communication'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Mathematics -I'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Financial Accounting & Management'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'OOP Using C++'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Internet Technology and Web Design'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Organization Behavior'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Mathematics -II'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Python'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Data Structure Using C & C++'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Operating System'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Digital Electronics & Computer Organization'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Elements of Statistics'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Computer Graphics & Animation'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Database Management System'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Software Engineering'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Optimization Techniques'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Mathematics -III'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Knowledge Management'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Java Programming'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Computer Network'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Numerical Methods'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Information & Cyber Security'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Internet Of Things'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'E-Commerce'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%elif id == 'Data Science and Machine Learning'%}
+    <h1><a href = ''>View Notes</a></h1>
+    {%endif%}
+    </body>
+</html>

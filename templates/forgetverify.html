@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+</head>
+<body>
+    <center><h1 style="margin-top: 20px;color: red;margin-bottom: 50px">Enter OTP</h1></center>
+    <center><form action="/forgot_verify_otp" method="POST">
+        <label for="otp" style="color: royalblue;font-size: 50px; margin-right: 30px;">OTP:</label>
+        <input type="text" name="otp" style="height: 20px;border: 1px solid blue;" required ><br>
+        <button type="submit" style="margin-top: 30px;height: 60px;width: 100px;background-color: white;border: 1px solid red;color: limegreen;font-size: 15px;">Verify OTP</button>
+    </form></center>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <center><ul style="color: royalblue; font-size: 20px;margin-top: 20px;">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul></center>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>

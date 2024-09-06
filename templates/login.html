@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BCA wala - LogIn</title>
+        <link href = "static\login.css" rel="stylesheet">
+    </head>
+    <body>
+        <body  id = "main"><br>
+            <center><span id = "heading">Log In</span></center>
+            <div>
+                <img src="static\images\logo-removebg-preview.png" id = "logo">
+                <form method="post">
+                    {{template_form.hidden_tag()}}
+                    <span id = "email">{{template_form.email.label}}
+                        {{template_form.email()}}
+                    </span> <br>
+                    <span id = "password">{{template_form.password.label}}
+                        {{template_form.password()}}
+                    </span>
+                    <center><a href = "{{url_for('forgot_pass')}}" style="font-size: 25px;font-family: cursive;text-decoration: none;">Forgot Password?</a></center>
+                </center>
+                {%with messages = get_flashed_messages()%}
+                   {% if messages %}
+                      {% for message in messages %}
+                        <center> <h3 id = "message">{{ message}}</h3></center>
+                       {%endfor%}
+                    {%endif%}
+                {%endwith%}
+                    <span id = "submit">
+                        {{template_form.submit()}}
+                    </span>
+                </form>
+            </div>
+            <center><a href="{{url_for('signin')}}" style="margin-top: 100px;font-size: 50px;border: 1px solid whitesmoke; background: skyblue ; text-decoration: none;">Register Now</a>
+    </body>
+</html>

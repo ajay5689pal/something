@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            BCA Wala-Home
+        </title>
+        <link href="static\home.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src = "static\images\logo-removebg-preview.png">
+            <span class = "practice"><a href = "{{url_for('practice_sub_name')}}" style="color: black;"><img class  = "img" src = "static\images\practice.JPG">Practice</a></span>
+            <span class = "Carrer"><a href = "{{url_for('career')}}" style="color: black;"><img class  = "img" src = "static\images\career.JPG"> Career Center</a></span>
+            <span class = "refer"><a href = "/earn" style="color: black;"><img class  = "img" src = "static\images\earn.JPG">Earn</a></span>
+            <span class = "account"><a href="{{url_for('account')}}" style="color: black;"><img class  = "img" src = "static\images\account.JPG"></a></span>     
+        </header>
+        <h1 id="message">Note!!!! this site is best viewed on PC or a Laptop...So for best experience Please view on Large screen. </h1>
+        {%if current_user.Email_Verify  == 'unverified'%}
+        <h1 id="note"> <a href = "{{url_for('sendgmail')}}" style="text-decoration: none; color: blue;">Click here to verify your Email </a></h1>
+        {%endif%}
+        <div class="menu-btn">
+            <span class="menu-icon">&#9776;</span>
+        </div>
+    
+        <nav class="sidebar">
+            <div class="close-btn">&times;</div>
+            <ul>
+                <li><a href="{{url_for('practice_sub_name')}}" id = "menuitem1">Practice</a></li>
+                <li><a href="{{url_for('career')}}" id = "menuitem">Learn</a></li>
+                <li><a href="{{url_for('earn')}}" id = "menuitem">Earn</a></li>
+                <li><a href="{{url_for('account')}}" id = "menuitem">Account</a></li>
+            </ul>
+        </nav>
+         <script>document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+            document.body.classList.toggle('overlay');
+        });
+        
+        // Close the sidebar when the close button is clicked
+        document.querySelector('.close-btn').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.body.classList.remove('overlay');
+        });
+        
+        // Close the sidebar when clicking outside of it
+        document.querySelector('.content').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.body.classList.remove('overlay');
+        });</script>
+    
+        <section class="firstyear">
+            <div id="sem1">
+                <h1 style="text-align: center; padding-top: 10px;font-size: 30px;"> BCA Semester 1 Notes</h1>
+                <center><hr color="rgba(255, 0, 0, 0.568)" size="5px" width="50%"></center>
+                    <ul id = "topicsem1" type = "disc">
+                        <a href ="{{ url_for('tests', id= 'Computer Fundamental') }}"> <li>
+                            Computer Fundamental & Problem solving Techniques</li></a>
+
+                       <a href ="{{url_for('tests' ,id = 'C Programming')}}"> <li>C Programming </li></a>
+                       <a href ="{{url_for('tests' ,id = 'Principle of Management')}}"><li>Principle of Management</li></a>
+                       <a href ="{{url_for('tests' ,id = 'Business Communication')}}"><li>Business Communication </li></a>
+                        <a href ="{{url_for('tests' ,id = 'Mathematics -I')}}"><li>Mathematics -I</li></a>
+                    </ul>
+                </div>
+                    <div id = "sem2">
+            <h1 style="text-align: center; padding-top: 10px;font-size: 30px;"> BCA Semester 2 Notes</h1>
+
+            <center><hr color="rgba(255, 0, 0, 0.568)" size="5px" width="50%"></center>
+                    <ul id = "topicsem1" type = "disc">
+                        <a href ="{{url_for('tests' ,id = 'Financial Accounting & Management')}}"><li>
+                            Financial Accounting & Management</li></a>
+                            <a href ="{{url_for('tests' ,id = 'OOP Using C++')}}"><li>OOP Using C++ </li></a>
+                                <a href ="{{url_for('tests' ,id = 'Internet Technology and Web Design')}}"><li>Internet Technology and Web Design</li></a>
+                                    <a href ="{{url_for('tests' ,id = 'Organization Behavior')}}"><li>Organization Behavior </li></a>
+                                        <a href ="{{url_for('tests' ,id = 'Mathematics -II')}}"> <li>Mathematics -II</li></a>
+                    </div>
+                    <div id = "sem3">
+                    <h1 style="text-align: center; padding-top: 10px;font-size: 30px;"> BCA Semester 3  Notes</h1>
+                    <center><hr color="rgba(255, 0, 0, 0.568)" size="5px" width="50%"></center>        
+                    <ul id = "topicsem1" type = "disc">
+                        <a href ="{{url_for('tests' ,id = 'Python')}}"> <li>Python</li></a>
+                            <a href ="{{url_for('tests' ,id = 'Data Structure Using C & C++')}}"> <li>Data Structure Using C & C++</li></a>
+                                <a href ="{{url_for('tests' ,id = 'Operating System')}}"> <li>Operating System</li></a>
+                                    <a href ="{{url_for('tests' ,id = 'Digital Electronics & Computer Organization')}}"><li>Digital Electronics & Computer Organization</li></a>
+                                        <a href ="{{url_for('tests' ,id = 'Elements of Statistics')}}"><li>Elements of Statistics</li></a>
+                            </div>
+        </section>
+            <section class="firstyear">
+                <div id="sem1">
+                    <h1 style="text-align: center; padding-top: 10px;font-size: 30px;"> BCA Semester 4 Notes</h1>
+                    <center><hr color="rgba(255, 0, 0, 0.568)" size="5px" width="50%"></center>
+                        <ul id = "topicsem1" type = "disc">
+                            <a href ="{{url_for('tests' ,id = 'Computer Graphics & Animation')}}"><li>
+                                Computer Graphics & Animation</li></a>
+                                <a href ="{{url_for('tests' ,id = 'Database Management System')}}"><li>Database Management System </li></a>
+                                    <a href ="{{url_for('tests' ,id = 'Software Engineering')}}"><li>Software Engineering</li></a>
+                                        <a href ="{{url_for('tests' ,id = 'Optimization Techniques')}}"><li>Optimization Techniques </li></a>
+                                            <a href ="{{url_for('tests' ,id = 'Mathematics -III')}}"><li>Mathematics -III</li></a>
+                        </ul>
+                    </div>
+                        <div id = "sem2">
+                <h1 style="text-align: center; padding-top: 10px;font-size: 30px;"> BCA Semester 5 Notes</h1>
+    
+                <center><hr color="rgba(255, 0, 0, 0.568)" size="5px" width="50%"></center>
+                        <ul id = "topicsem1" type = "disc">
+                            <a href ="{{url_for('tests' ,id = 'Knowledge Management')}}"><li>
+                                Knowledge Management</li></a>
+                                <a href ="{{url_for('tests' ,id = 'Java Programming')}}"> <li>Java Programming </li></a>
+                                    <a href ="{{url_for('tests' ,id = 'Computer Network')}}"> <li>Computer Network</li></a>
+                                        <a href ="{{url_for('tests' ,id = 'Numerical Methods')}}"><li>Numerical Methods</li></a>
+                        </div>
+                        <div id = "sem3">
+                        <h1 style="text-align: center; padding-top: 10px;font-size: 30px;"> BCA Semester 6  Notes</h1>
+                        <center><hr color="rgba(255, 0, 0, 0.568)" size="5px" width="50%"></center>        
+                        <ul id = "topicsem1" type = "disc">
+                            <a href ="{{url_for('tests' ,id = 'Information & Cyber Security')}}"> <li>Information & Cyber Security</li></a>
+                                <a href ="{{url_for('tests' ,id = 'Internet Of Things')}}"> <li>Internet Of Things</li></a>
+                                    <a href ="{{url_for('tests' ,id = 'E-Commerce')}}"> <li>E-Commerce</li></a>
+                                        <a href ="{{url_for('tests' ,id = 'Data Science and Machine Learning')}}"> <li>Data Science and Machine Learning</li>
+                                        </a></div>
+        </section>
+            <p id = "para">
+                Career Opportunities:
+                <div id = "scope">
+                <ol class = "scope">
+                    <li id = "li">One can Persue their masters after BCA that is MCA.</li>
+                    <li id = "li">BCA provides a foundation in programming and software development concepts, which can help secure entry-level positions.</li>
+                <li id = "li">BCA graduates can learn skills to help businesses grow online.</li>
+                <li id = "li">BCA teaches computer application and software development concepts, which can make cyber security a good career option.</li>
+                <li id = "li">BCA graduates can create and maintain websites.</li>
+                </ol>
+            </p>
+        </div>
+        <footer>
+            <article id = "contact">Contact Us</article>
+            <a href = "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSKjDTLKqpSwQTVZLrJPFSwMncFPzWksgBjxjrWZQkfSKBpMQfZzzdzBDBkjRHtbbZtDjKsq" target="_blank"><img src = "static\images\gmail.png" id = "gmail"></a>            <a href = "https://wa.me/916393043014" target="_blank"><img id = "wap" src="static\images\wp.png"></a>
+        </footer>
+       </body>
+</html>

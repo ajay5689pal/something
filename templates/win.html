@@ -1,0 +1,13 @@
+<html>
+    <head>
+      <title>BCA wala - Earning</title>
+      <link href = "static\prediction.css" rel="stylesheet">
+    </head>
+    <body>
+      <div>
+        <center> <a href = "{{url_for('home')}}"><img class="logo" src = "static/images/logo-removebg-preview.png"></a></center>
+        <h1 id = "head">Well done , You got it right Champ ----></h1>
+        <h1 id = "head">You have <span>{{current_user.Wallet}} Coins</span> in your wallet.</h1>
+        <a href = "/game" id="submit">Earn</a></div>
+    </body>
+</html>

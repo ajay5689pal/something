@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BCA Wala - Earn</title>
+    <link href = 'static\game.css' rel="stylesheet">
+</head>
+<body>
+
+    <center> <a href = "{{url_for('home')}}"><img class="logo" src = "static/images/logo-removebg-preview.png"></a></center>
+    <h1>Guess the Number</h1>
+    <h2>Min Amount should be 100 coins</h2>
+    
+    <form method="post">
+        {{form.hidden_tag()}}
+        <article>
+        <label id = 'bet'>
+            {{form.amount.label}}
+            {{form.amount()}}
+        </label></article>
+        
+        {%with messages = get_flashed_messages()%}
+        {% if messages %}
+           {% for message in messages %}
+           <center> <h3 id = "message">{{ message}}</h3></center>
+            {%endfor%}
+         {%endif%}
+     {%endwith%}
+       <p> {{form.color}}</p>
+
+        <h1 id=" submit">{{form.submit()}}</h1>
+    </form>
+    </body>
+    </html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+        BCA wala - Skills
+        </title>
+        <style >
+            a :link{
+                color: royalblue;
+            }
+            a  :visited{
+                color: royalblue;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body style="font-family: cursive;">
+        <center> <a href = "{{url_for('home')}}"><img class="logo" src = "static/images/logo-removebg-preview.png"></a></center>
+        <center><h1 style="margin: 0 auto; margin-top: 40px; color: red; margin-bottom: 100px; font-size: 70px;">Placement/skills Hub</h1></center>
+        <a href = "{{url_for('learn' , topic = 'Python' )}}"><p style="margin-bottom: 40px;    margin-left: 40px; color: royalblue; font-size: 40px;">Learn Python- Beginner to Advanced</p></a>
+        <hr style="width: 400px; height: 5px; background: aquamarine; margin-left: 40px;margin-bottom: 50px;">
+        <a href = "{{url_for('learn' , topic = 'html' )}}"><p style="margin-bottom: 40px;    margin-left: 40px; color: royalblue; font-size: 40px;">Learn HTML & CSS - Frontend Web Development</p></a>
+        <hr style="width: 400px; height: 5px; background: aquamarine; margin-left: 40px;margin-bottom: 50px;">
+        <a href = "{{url_for('learn' , topic = 'webdevelopment' )}}"><p style="margin-bottom: 40px;    margin-left: 40px; color: royalblue; font-size: 40px;">Learn Web Development- Full Stack</p></a>
+        <hr style="width: 400px; height: 5px; background: aquamarine; margin-left: 40px;margin-bottom: 50px;">
+        <a href = "{{url_for('learn' , topic = 'JavaScript')}}"><p style="margin-bottom: 40px;     margin-left: 40px; color: royalblue; font-size: 40px;">Learn JavaScript</p></a>
+        <hr style="width: 400px; height: 5px; background: aquamarine; margin-left: 40px;margin-bottom: 50px;">
+    </body>
+</html>

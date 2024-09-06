@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCa Wala - Premium</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <center> <a href = "{{url_for('home')}}"><img class="logo" src = "static/images/logo-removebg-preview.png"></a></center>
+   <center><h1 style="color: red; font-size: 60px; font-family: cursive; margin-top: 40px; margin-bottom: 70px;">Confirm Payment</h1></center>
+    <p style="color: limegreen;font-size: 50px;margin-left: 50px;margin-bottom: 100px;">Amount: <span style="color: deeppink; font-size: 80px; margin-bottom: 60px;">299/Lifetime</span></p>
+    <ul style="font-size: 50px; margin-left: 80px; color: red;">what we offer to our Premium members?
+        <li>
+            <li style="color: royalblue; font-size: 40px; margin-bottom: 30px; margin-left: 80px;">Access to all the contents of our website</li>
+            <li style="color: royalblue; font-size: 40px; margin-bottom: 30px; margin-left: 80px;">Access to our exclusive Job Preparation series</li>
+            <li style="color: royalblue; font-size: 40px; margin-bottom: 30px; margin-left: 80px;">Access to our Skill Path - web development , Coding and App developmnet</li>
+            <li style="color: royalblue; font-size: 40px; margin-bottom: 30px; margin-left: 80px;">Aceess to our infinite well prepared and well researched Test series for exams</li>
+            <li style="color: royalblue; font-size: 40px; margin-bottom: 30px; margin-left: 80px;">Get your doubt solved by our expert team</li>
+        </li>
+    </ul>
+    
+    <form id="paymentForm" action="/success" method="POST">
+        <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
+        <input type="hidden" name="razorpay_order_id" id="razorpay_order_id">
+        <center><button id="payButton" type="button" style="color: rgba(137, 43, 226, 0.781); font-size: 40px;border: 1px solid limegreen;height: 70px;width: 180px;background: white; ">Pay Now</button></center>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var options = {
+                "key": "rzp_test_cQCRSrPmXpnQyN", // Replace with your Razorpay Key ID
+                "amount": 299 * 100, // Amount in paise (299 INR)
+                "currency": "INR",
+                "name": "Your Company Name",
+                "description": "Premium Membership",
+                "handler": function (response){
+                    document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
+                    document.getElementById('razorpay_order_id').value = response.razorpay_order_id;
+                    document.getElementById('paymentForm').submit();
+                },
+                "prefill": {
+                    "name": "John Doe",
+                    "email": "john.doe@example.com",
+                    "contact": "9999999999"
+                },
+                "notes": {
+                    "address": "Razorpay Corporate Office"
+                },
+                "theme": {
+                    "color": "#F37254"
+                }
+            };
+            var rzp = new Razorpay(options);
+            document.getElementById('payButton').onclick = function(e){
+                rzp.open();
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

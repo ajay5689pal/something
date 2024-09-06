@@ -1,0 +1,43 @@
+body {
+    font-family: cursive;
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    color: aquamarine; 
+    margin-bottom: 30px;
+}
+
+.question {
+    margin-bottom: 20px;
+    color: blueviolet;
+    font-size: 30px;
+    margin-left: 20px;
+}
+label{
+    color: cornflowerblue;
+
+}
+button {
+    font-size: 30px;
+    border: 2px solid limegreen;
+    height: 60px;
+    display: block;
+    width: 180px;
+    text-align: center;
+    margin-left: 220px;
+    padding-top: 7px;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-left: 550px;
+    color: red;
+    background-color: black;
+}
+.logo{
+    padding-top: 20px;
+     height: 100px;
+     width: 300px;
+ }
